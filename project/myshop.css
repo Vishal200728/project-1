@@ -1,0 +1,428 @@
+/* ================== RESET ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* --- CSS for the Remove Checkbox --- */
+
+/* 1. Ensure the card is the positioning context for the absolute checkbox */
+.card {
+    position: relative; /* Crucial for absolute positioning of child element */
+    /* Other card styles... */
+}
+
+/* 2. Style the container for the checkbox */
+.remove-option-container {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 10; /* Ensure it stays above the image */
+    background: rgba(255, 255, 255, 0.85); /* Light background for visibility */
+    padding: 3px 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.85em;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* 3. Style the checkbox itself */
+.remove-option-container input[type="checkbox"] {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* ================== HIDDEN CHECKBOXES ================== */
+.toggle-hidden {
+  display: none;
+}
+
+/* ================== HEADER ================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  color: #fff;
+}
+.site-header .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.header-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.header-controls .search,
+.header-controls .filter {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  display: flex;
+  gap: 1rem;
+  background: #1e293b;
+  padding: 0.6rem 2rem;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+.navbar a:hover,
+.navbar a.active {
+  background: #334155;
+}
+
+/* ================== GRID ================== */
+.container {
+  padding: 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ================== PRODUCT GRID CONTAINER ================== */
+/* This container wraps all the individual .card elements */
+#products .grid {
+    display: grid; 
+    /* CRITICAL: Creates six columns, each taking an equal fraction of the space */
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 20px; /* Space between the cards */
+    padding: 20px 0; /* Optional: adds padding above and below the grid */
+}
+
+/* ================== PRODUCT CARD ================== */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover; /* Ensures image fills the space without distortion */
+}
+.card h3 {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+}
+.meta {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+.price {
+    margin-top: 0.3rem;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    /* To push action buttons to the bottom of cards with varying content heights */
+    margin-top: auto; 
+    padding-top: 10px; 
+}
+
+/* Adjust layout for typical desktop/large laptop screens */
+@media (max-width: 1440px) {
+    #products .grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns max */
+    }
+}
+
+/* Adjust layout for standard tablet or small laptop screens */
+@media (max-width: 1024px) {
+    #products .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+/* Adjust layout for mobile screens */
+@media (max-width: 600px) {
+    #products .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* ================== BUTTONS ================== */
+.btn {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background: #e2e8f0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: 0.2s;
+}
+.btn.primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #94a3b8;
+  color: #475569;
+}
+.btn.small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.tag {
+  background: #334155;
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+/* ================== CART DRAWER ================== */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  z-index: 100;
+}
+#cart-toggle:checked ~ .cart-drawer {
+  right: 0;
+}
+.cart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.cart-item {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.cart-item img {
+  width: 50px;
+  border-radius: 6px;
+}
+.cart-title {
+  font-weight: bold;
+}
+.cart-meta {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+.cart-footer {
+  margin-top: auto;
+}
+.cart-total {
+  font-weight: bold;
+}
+.cart-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+/* ================== MODAL ================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+#add-toggle:checked ~ .modal {
+  display: flex;
+}
+.modal-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.2rem;
+}
+.form-actions {
+  text-align: right;
+  margin-top: 0.8rem;
+}
+
+/* ================== IMAGE VIEWER ================== */
+.viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+}
+.viewer img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+.viewer:target {
+  display: flex;
+}
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* ================== PRODUCT DETAIL OVERLAY ================== */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 400;
+}
+.overlay:target {
+  display: flex;
+}
+.detail-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  max-width: 800px;
+  width: 90%;
+}
+.detail-left img {
+  max-width: 250px;
+  border-radius: 12px;
+}
+.detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.variant-list {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  /* Header */
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-controls .search,
+  .header-controls .filter {
+    flex: 1;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+    gap: 0.6rem;
+  }
+  .navbar a {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* Product Grid */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cart Drawer */
+  .cart-drawer {
+    width: 100%;
+    right: -100%;
+  }
+  #cart-toggle:checked ~ .cart-drawer {
+    right: 0;
+  }
+
+  /* Modal */
+  .modal-box {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  /* Detail Overlay */
+  .detail-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .detail-left img {
+    max-width: 200px;
+  }
+  .variant-list {
+    justify-content: center;
+  }
+}

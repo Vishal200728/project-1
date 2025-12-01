@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Website</title>
+  <link rel="stylesheet" href="home.css" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+        <div class="brand">TECH VISHAL</div>
+       <a href="singup.html">Sing up</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="home.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Product</a>
+    <a href="myshop.html">MY SHOP</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+   <div class="container">
+    <form action="https://www.bing.com/search" method="get" class="search-bar">
+        <input type="text" placeholder="search anything" name="q">
+        <button type="submit"><img src="logo.webp"></button>
+    </form>
+ </div>
+
+  <!-- ===== Image Slider Section ===== -->
+<section class="image-slider-section">
+  <h2>Latest Promotions</h2>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="image1.jpg.webp" alt="Promo 1" /></div>
+      <div class="slide"><img src="image3.jpg.jpg" alt="Promo 2" /></div>
+      <div class="slide"><img src="image2.jpg.webp" alt="Promo 3" /></div>
+      <div class="slide"><img src="image4.jpg.jpg" alt="Promo 4" /></div>
+    </div>
+    <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+    <button class="slider-btn next" onclick="nextSlide()">❯</button>
+  </div>
+</section>
+
+<!-- ===== Popular Search Items Section ===== -->
+<section class="popular-search-section">
+  <h2>Popular Search Items</h2>
+  <div class="popular-search-grid">
+<a href="allcatertegories.html" class="search-item">ALL CATERGORIES</a>
+    <a href="computer.html" class="search-item">COMNPUTERS</a>
+    <a href="speakers.html" class="search-item">Speaker</a>
+    <a href="mobiles.html" class="search-item">MOBILES</a>
+    <a href="laptop.html" class="search-item">LAPTOPS</a>
+    <a href="watch.html" class="search-item">SMART WATCHES</a>
+    <a href="headphones.html" class="search-item">HEADPHONES</a>
+    <a href="television.html" class="search-item">TELEVISION</a>
+    <a href="camera.html" class="search-item">CAMERA</a>
+    <a href="tab.html" class="search-item">TAB</a>
+
+  </div>
+</section>
+
+
+<button id="scrollDownBtn" title="Scroll to Bottom">↓</button>
+<button id="scrollTopBtn" title="Scroll to Top">↑</button>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome to Our Shop</h2>
+    <p>Electronics is a branch of physics and engineering focused on the study and application of electron behavior and their flow through materials, including vacuum and semiconductors. It encompasses the design, construction, and operation of devices that control and utilize the flow of electrons to perform various functions, often involving circuits and components.</p>
+    <a href="about.html" class="btn">Read More</a>
+  </section>
+
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="giant_374193.png" alt="COMNPUTERS" />
+        <h3>GAMING COMPUTER</h3>
+      </div>
+      <div class="product">
+        <img src="HP_DOTD_VC_12Aug2025_2l1MhzSBkk.webp" alt="HP VC" />
+        <h3>HP Vaccum cleanner</h3>
+      </div>
+      <div class="product">
+        <img src="HP_DOTD_NB_12Aug2025_p6_btno6nM.webp" alt="HP Notebook" />
+        <h3>HP Airbuds</h3>
+      </div>
+      <div class="product">
+        <img src="HP_DOTD_Camera_12Aug2025_EarH6z-dI6.webp" alt="Camera" />
+        <h3>Digital Camera</h3>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== Video Section ===== -->
+<section class="video-section">
+  <h2>Explore Our Electronics Products</h2>
+  <div class="video-grid">
+    
+  <!-- Video 1: YouTube Embed -->
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XfQs-PQaC_E?si=mqwBRTeo88ze_4t5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+    <!-- Video 2 -->
+    <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mz5d_qMFNZ0?si=kZz5Op5Z3HXgTB3n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WHLuimGVzBA?si=oGznyLAbxVudUI-5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bu3qkwe3WOc?si=bfPeQsQQLomcD7w3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+<!-- Video 5 -->
+    <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wt1G_fc9EHs?si=u6MhCDAKpYZAn2tN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 6 -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/T21Ah2cJnhk?si=ZtKb51AHsNOY63TF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== Review Section ===== -->
+<section class="review-section">
+  <h2>Customer Reviews</h2>
+  <div class="reviews-container">
+    
+    <div class="review-card">
+      <img src="KCL-with-credit-scaled.jpg" alt="Customer 1">
+      <h3>Riya Sharma</h3>
+      <p>"Excellent quality products! The HP printer I ordered works perfectly and arrived on time."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="review-card">
+      <img src="girl-assembling-electronics-science-center-260nw-2474649851.webp" alt="Customer 2">
+      <h3>Arjun Verma</h3>
+      <p>"Customer support was super helpful. I’m very satisfied with my digital camera purchase!"</p>
+      <div class="stars">★★★★☆</div>
+    </div>
+
+    <div class="review-card">
+      <img src="gettyimages-825180846-612x612.jpg" alt="Customer 3">
+      <h3>Sneha Patel</h3>
+      <p>"Loved the airbuds! Affordable, stylish, and excellent sound quality. Highly recommended."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+       <div class="review-card">
+      <img src="diverse-school-children-students-build-260nw-2036186204.webp" alt="Customer Photo">
+      <h3>Vishal Mehra</h3>
+      <p>"Amazing experience! The HP printer I ordered was delivered quickly and works perfectly. Great service!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Popular Products Section ===== -->
+<section class="popular-products">
+  <h2>Popular Products</h2>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <img src="HP_DOTD_NB_12Aug2025_p6_btno6nM.webp" alt="Airbuds">
+      <h3>HP Airbuds</h3>
+      <p>High-quality sound with long battery life. Bestseller of the month!</p>
+    </div>
+
+    <div class="product-card">
+      <img src="HP_DOTD_Printer_12Aug2025_f0EWA0hy5r.webp" alt="Printer">
+      <h3>HP DeskJet Printer</h3>
+      <p>Efficient wireless printing. Trusted by thousands of students.</p>
+    </div>
+
+    <div class="product-card">
+      <img src="HP_DOTD_Camera_12Aug2025_EarH6z-dI6.webp" alt="Camera">
+      <h3>Digital Camera</h3>
+      <p>Compact, powerful, and perfect for capturing every moment.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-question">
+      <h3>Q: What is your return policy?</h3>
+      <p>A: We offer 30-day returns with full refunds.</p>
+    </div>
+    <div class="faq-question">
+      <h3>Q: Do you ship internationally?</h3>
+      <p>A: Yes, we ship to over 100 countries worldwide.</p>
+    </div>
+  </section>
+
+  <!--footer -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Product</a></li>
+         <li><a href="myshop.html"> MY SHOP</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+ <div class="footer-section">
+  <h3>Follow Us</h3>
+  <a href="https://www.instagram.com/orokana_1/" > 
+    <img src="download (1).jfif" alt="Instagram Logo">
+    <P>INSTAGRAM</P>
+    </a>
+</div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>123 Street, City, India</p>
+      <p><i class="fa-solid fa-phone"></i> +91-9876543210</p>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+
+</body>
+</html>

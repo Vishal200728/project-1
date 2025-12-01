@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Shop — HTML + CSS Only (interactive)</title>
+  <link rel="stylesheet" href="myshop.css" />
+</head>
+<body>
+
+  <!-- CHECKBOX TOGGLES -->
+  <input id="cart-toggle" class="toggle-hidden" type="checkbox" />
+  <input id="add-toggle" class="toggle-hidden" type="checkbox" />
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">Mini Shop</div>
+
+   <div class="header-controls">
+        <input 
+            id="search-input" 
+            class="search" 
+            placeholder="Search products..." 
+            aria-label="search" 
+        />
+        
+        <select id="category-select" class="filter" aria-label="category filter">
+            <option value="all">All Categories</option> 
+        </select>
+      <label for="add-toggle" class="btn">Add Product</label>
+      <label for="cart-toggle" class="btn">Cart <span class="tag">0</span></label>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Product</a>
+    <a href="myshop.html" class="active">My Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- MAIN GRID -->
+  <main class="container" id="products">
+    <section class="grid">
+      
+      <!-- PRODUCT 1 -->
+      <article class="card">
+        <a href="#view-1" class="thumb">
+          <img src="71iNq25OGOL._AC_UL320_.webp" alt="Explorer Watch" />
+        </a>
+        <h3>Explorer Watch</h3>
+        <div class="meta">Model: EX-1 • Accessories</div>
+        <div class="price">₹ 5,999</div>
+        <div class="card-actions">
+          <a href="#detail-1" class="btn primary">View details</a>
+          <span class="btn ghost">Quick buy</span>
+        </div>
+      </article>
+
+      <!-- PRODUCT 2 -->
+      <article class="card">
+        <a href="#view-2" class="thumb">
+          <img src="QuietForce Headphones.webp" alt="Headphones" />
+        </a>
+        <h3>QuietForce Headphones</h3>
+        <div class="meta">Model: QF-200 • Electronics</div>
+        <div class="price">₹ 3,299</div>
+        <div class="card-actions">
+          <a href="#detail-2" class="btn primary">View details</a>
+          <span class="btn ghost">Quick buy</span>
+        </div>
+      </article>
+
+      <!-- PRODUCT 3 -->
+      <article class="card">
+        <a href="#view-3" class="thumb">
+          <img src="RunSwift Sneakers.webp" alt="Sneakers" />
+        </a>
+        <h3>RunSwift Sneakers</h3>
+        <div class="meta">Model: RS-9 • Clothing</div>
+        <div class="price">₹ 2,499</div>
+        <div class="card-actions">
+          <a href="#detail-3" class="btn primary">View details</a>
+          <span class="btn ghost">Quick buy</span>
+        </div>
+      </article>
+
+      <!-- PRODUCT 4 -->
+      <article class="card">
+        <a href="#view-4" class="thumb">
+          <img src="PeakCam Mirrorless.webp" alt="Camera" />
+        </a>
+        <h3>PeakCam Mirrorless</h3>
+        <div class="meta">Model: PC-X • Electronics</div>
+        <div class="price">₹ 45,999</div>
+        <div class="card-actions">
+          <a href="#detail-4" class="btn primary">View details</a>
+          <span class="btn ghost">Quick buy</span>
+        </div>
+      </article>
+
+      <!-- PRODUCT 5 -->
+      <article class="card">
+        <a href="#view-5" class="thumb">
+          <img src="Alpine Jacket.webp" alt="Jacket" />
+        </a>
+        <h3>Alpine Jacket</h3>
+        <div class="meta">Model: AJ-3 • Clothing</div>
+        <div class="price">₹ 7,299</div>
+        <div class="card-actions">
+          <a href="#detail-5" class="btn primary">View details</a>
+          <span class="btn ghost">Quick buy</span>
+        </div>
+      </article>
+
+          <!-- PRODUCT 6 -->
+    <article class="card">
+      <a href="#view-6" class="thumb">
+        <img src="apple.webp" alt="iPhone 16 Pro Max" />
+      </a>
+      <h3>iPhone 16 Pro Max</h3>
+      <div class="meta">Model: IP16PM • Electronics</div>
+      <div class="price">₹ 1,49,999</div>
+      <div class="card-actions">
+        <a href="#detail-6" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 7 -->
+    <article class="card">
+      <a href="#view-7" class="thumb">
+        <img src="Apple Watch Series 9.webp" alt="Apple Watch" />
+      </a>
+      <h3>Apple Watch Series 10</h3>
+      <div class="meta">Model: AW-10 • Accessories</div>
+      <div class="price">₹ 44,999</div>
+      <div class="card-actions">
+        <a href="#detail-7" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 8 -->
+    <article class="card">
+      <a href="#view-8" class="thumb">
+        <img src="trendyclothes.webp" alt="Trendy Clothes" />
+      </a>
+      <h3>Trendy Outfit</h3>
+      <div class="meta">Model: CLO-88 • Clothing</div>
+      <div class="price">₹ 3,999</div>
+      <div class="card-actions">
+        <a href="#detail-8" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 9 -->
+    <article class="card">
+      <a href="#view-9" class="thumb">
+        <img src="71Nwtop9jtL._SL1500_.jpg" alt="Samsung Mobile" />
+      </a>
+      <h3>Samsung Galaxy S24 Ultra</h3>
+      <div class="meta">Model: S24U • Electronics</div>
+      <div class="price">₹ 1,29,999</div>
+      <div class="card-actions">
+        <a href="#detail-9" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 10 -->
+    <article class="card">
+      <a href="#view-10" class="thumb">
+        <img src="Apple Smart TV 65-Inch UHD.webp" alt="Smart TV" />
+      </a>
+      <h3>Smart TV 55"</h3>
+      <div class="meta">Model: STV-55 • Electronics</div>
+      <div class="price">₹ 59,999</div>
+      <div class="card-actions">
+        <a href="#detail-10" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 11 -->
+    <article class="card">
+      <a href="#view-11" class="thumb">
+        <img src="canon-eos-r5.web.webp" alt="DSLR Camera" />
+      </a>
+      <h3>Pro DSLR Camera</h3>
+      <div class="meta">Model: DSLR-PRO • Electronics</div>
+      <div class="price">₹ 89,999</div>
+      <div class="card-actions">
+        <a href="#detail-11" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 12 -->
+    <article class="card">
+      <a href="#view-12" class="thumb">
+        <img src="download (9).jpg" alt="Wireless Airbuds" />
+      </a>
+      <h3>Wireless Airbuds</h3>
+      <div class="meta">Model: WB-200 • Accessories</div>
+      <div class="price">₹ 4,499</div>
+      <div class="card-actions">
+        <a href="#detail-12" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 13 -->
+    <article class="card">
+      <a href="#view-13" class="thumb">
+        <img src="firebar-20-infire-original-imaha6ctaxz6ysjp.webp" alt="Bluetooth Speaker" />
+      </a>
+      <h3>Bluetooth Speaker</h3>
+      <div class="meta">Model: SPK-5 • Electronics</div>
+      <div class="price">₹ 6,999</div>
+      <div class="card-actions">
+        <a href="#detail-13" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    <!-- PRODUCT 14 -->
+    <article class="card">
+      <a href="#view-14" class="thumb">
+        <img src="macbook-air-m3.webp" alt="Laptop" />
+      </a>
+      <h3>UltraBook Laptop</h3>
+      <div class="meta">Model: UB-15 • Electronics</div>
+      <div class="price">₹ 79,999</div>
+      <div class="card-actions">
+        <a href="#detail-14" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+        <!-- PRODUCT 15 -->
+    <article class="card">
+      <a href="#view-15" class="thumb">
+        <img src="dd49eb5bf3a6c340588c19036b8eb1dc.jpg" alt="Gaming Console" />
+      </a>
+      <h3>NextGen Gaming Console</h3>
+      <div class="meta">Model: GC-9 • Electronics</div>
+      <div class="price">₹ 49,999</div>
+      <div class="card-actions">
+        <a href="#detail-15" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    
+        <!-- PRODUCT 16 -->
+    <article class="card">
+      <a href="#view-16" class="thumb">
+        <img src="dry.webp" alt="SHIVAAY MIX DRY FRUITS " />
+      </a>
+      <h3>SHIVAAY MIX DRY FRUITS </h3>
+      <div class="meta">Model:DRY FRUITS • GROCERY</div>
+      <div class="price">₹ 12,880</div>
+      <div class="card-actions">
+        <a href="#detail-16" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    
+        <!-- PRODUCT 17 -->
+    <article class="card">
+      <a href="#view-17" class="thumb">
+        <img src="-original-imahfh4ntfpfyyhc.webp" alt="Samsung 653 L" />
+      </a>
+      <h3>Samsung 653 L</h3>
+      <div class="meta">Model: Samsung 653 L • Electronics</div>
+      <div class="price">₹ 81,999</div>
+      <div class="card-actions">
+        <a href="#detail-17" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+
+    
+        <!-- PRODUCT 18 -->
+    <article class="card">
+      <a href="#view-18" class="thumb">
+        <img src="cycle.webp" alt="Urban Terrain " />
+      </a>
+      <h3>Urban Terrain </h3>
+      <div class="meta">Model:Urban Terrain • Accessories</div>
+      <div class="price">₹ 11,499</div>
+      <div class="card-actions">
+        <a href="#detail-18" class="btn primary">View details</a>
+        <span class="btn ghost">Quick buy</span>
+      </div>
+    </article>
+    </section>
+  </main>
+
+  <!-- CART DRAWER -->
+  <aside class="cart-drawer">
+    <div class="cart-head">
+      <strong>Your Cart</strong>
+      <label for="cart-toggle" class="btn small">Close ✕</label>
+    </div>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="133994753939776877.jpg" alt="" />
+        <div>
+          <div class="cart-title">Explorer Watch</div>
+          <div class="cart-meta">₹ 5,999 × 1</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="QuietForce Headphones.webp" alt="" />
+        <div>
+          <div class="cart-title">QuietForce Headphones</div>
+          <div class="cart-meta">₹ 3,299 × 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Subtotal: ₹ 9,298</div>
+      <div class="cart-actions">
+        <button class="btn">Clear</button>
+        <button class="btn primary">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ADD PRODUCT MODAL -->
+  <div class="modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3>Add Product (static)</h3>
+        <label for="add-toggle" class="btn small">Close</label>
+      </div>
+      <form class="form" onsubmit="return false;">
+        <label>Name <input placeholder="Product name" /></label>
+        <label>Model <input placeholder="Model" /></label>
+        <label>Category <input placeholder="Category" /></label>
+        <label>Price (₹) <input type="number" placeholder="Price" /></label>
+        <label>Sizes / variants <input placeholder="S,M,L or 128GB,256GB" /></label>
+        <label>Image URL <input placeholder="https://picsum.photos/..." /></label>
+        <label>Description <textarea rows="3" placeholder="Short description"></textarea></label>
+        <div class="form-actions">
+          <button class="btn primary">Add product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- DETAIL OVERLAYS (use :target) -->
+  <section id="detail-1" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="71iNq25OGOL._AC_UL320_.webp" alt="Explorer Watch" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Explorer Watch — EX-1</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>Explorer Watch</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Accessories</div>
+        <div class="desc">Rugged smartwatch for outdoors. GPS, long battery life and water resistance.</div>
+        <div class="price">₹ 5,999</div>
+
+        <div class="variants">
+          <div><strong>Variants:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Black</a>
+            <a class="tag" href="#products">Tan strap</a>
+          </div>
+        </div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-2" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="QuietForce Headphones.webp" alt="Headphones" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">QuietForce Headphones — QF-200</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>QuietForce Headphones</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">Premium noise-cancelling headphones with rich bass and 30h battery life.</div>
+        <div class="price">₹ 3,299</div>
+
+        <div class="variants">
+          <div><strong>Colors:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Black</a>
+            <a class="tag" href="#products">Silver</a>
+          </div>
+        </div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-3" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="RunSwift Sneakers.webp" alt="Sneakers" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">RunSwift Sneakers — RS-9</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>RunSwift Sneakers</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Clothing</div>
+        <div class="desc">Lightweight running sneakers for speed and comfort.</div>
+        <div class="price">₹ 2,499</div>
+
+        <div class="variants">
+          <div><strong>Sizes:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">8</a>
+            <a class="tag" href="#products">9</a>
+            <a class="tag" href="#products">10</a>
+          </div>
+        </div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-4" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="PeakCam Mirrorless.webp" alt="Camera" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">PeakCam Mirrorless — PC-X</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>PeakCam Mirrorless</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">Mirrorless camera with high-speed autofocus and 4K video capture.</div>
+        <div class="price">₹ 45,999</div>
+
+        <div class="variants">
+          <div><strong>Kit options:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Body only</a>
+            <a class="tag" href="#products">18-55 Kit</a>
+          </div>
+        </div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-5" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="Alpine Jacket.webp" alt="Jacket" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Alpine Jacket — AJ-3</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>Alpine Jacket</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Clothing</div>
+        <div class="desc">Waterproof insulated jacket for cold weather adventures.</div>
+        <div class="price">₹ 7,299</div>
+
+        <div class="variants">
+          <div><strong>Sizes:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">M</a>
+            <a class="tag" href="#products">L</a>
+            <a class="tag" href="#products">XL</a>
+          </div>
+        </div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- DETAIL OVERLAYS FOR NEW PRODUCTS -->
+
+  <section id="detail-6" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="apple.webp" alt="iPhone 16 Pro Max" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">iPhone 16 Pro Max — IP16PM</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>iPhone 16 Pro Max</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">Apple’s latest flagship with A18 Bionic, ProMotion display, and 5-day battery life.</div>
+        <div class="price">₹ 1,49,999</div>
+        <div class="variants">
+          <div><strong>Colors:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Silver</a>
+            <a class="tag" href="#products">Graphite</a>
+            <a class="tag" href="#products">Blue</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-7" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="Apple Watch Series 9.webp" alt="Apple Watch" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Apple Watch Series 10 — AW-10</div>
+      </div>
+      <div class="detail-right">
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <h2>Apple Watch Series 10</h2>
+          <a class="close-link btn small" href="#products">Close</a>
+        </div>
+        <div class="meta"><strong>Category:</strong> Accessories</div>
+        <div class="desc">Advanced health tracking, blood oxygen, ECG, and 2-day battery life.</div>
+        <div class="price">₹ 44,999</div>
+        <div class="variants">
+          <div><strong>Bands:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Sport</a>
+            <a class="tag" href="#products">Leather</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-8" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="trendyclothes.webp" alt="Clothes" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Trendy Outfit — CLO-88</div>
+      </div>
+      <div class="detail-right">
+        <h2>Trendy Outfit</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Clothing</div>
+        <div class="desc">Stylish casual wear made with breathable cotton fabric.</div>
+        <div class="price">₹ 3,999</div>
+        <div class="variants">
+          <div><strong>Sizes:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">M</a>
+            <a class="tag" href="#products">L</a>
+            <a class="tag" href="#products">XL</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-9" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="71Nwtop9jtL._SL1500_.jpg" alt="Samsung Mobile" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Samsung Galaxy S24 Ultra — S24U</div>
+      </div>
+      <div class="detail-right">
+        <h2>Samsung Galaxy S24 Ultra</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">6.9-inch AMOLED display, Snapdragon Gen 3, and quad camera system.</div>
+        <div class="price">₹ 1,29,999</div>
+        <div class="variants">
+          <div><strong>Colors:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Phantom Black</a>
+            <a class="tag" href="#products">Green</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-10" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="Apple Smart TV 65-Inch UHD.webp" alt="Smart TV" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Smart TV 55" — STV-55</div>
+      </div>
+      <div class="detail-right">
+        <h2>Smart TV 55"</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">4K Ultra HD Smart TV with Dolby Vision and HDR10+ support.</div>
+        <div class="price">₹ 59,999</div>
+        <div class="variants">
+          <div><strong>Sizes:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">43"</a>
+            <a class="tag" href="#products">55"</a>
+            <a class="tag" href="#products">65"</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-11" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="canon-eos-r5.web.webp" alt="DSLR Camera" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Pro DSLR Camera — DSLR-PRO</div>
+      </div>
+      <div class="detail-right">
+        <h2>Pro DSLR Camera</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">High-resolution DSLR with 8K video and interchangeable lenses.</div>
+        <div class="price">₹ 89,999</div>
+        <div class="variants">
+          <div><strong>Kits:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Body only</a>
+            <a class="tag" href="#products">18-55 Kit</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-12" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="download (9).jpg" alt="Wireless Airbuds" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Wireless Airbuds — WB-200</div>
+      </div>
+      <div class="detail-right">
+        <h2>Wireless Airbuds</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Accessories</div>
+        <div class="desc">Noise-cancelling wireless earbuds with 24h playtime.</div>
+        <div class="price">₹ 4,499</div>
+        <div class="variants">
+          <div><strong>Colors:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Black</a>
+            <a class="tag" href="#products">White</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-13" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="firebar-20-infire-original-imaha6ctaxz6ysjp.webp" alt="Bluetooth Speaker" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Bluetooth Speaker — SPK-5</div>
+      </div>
+      <div class="detail-right">
+        <h2>Bluetooth Speaker</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">Portable speaker with 360° sound and 20h battery life.</div>
+        <div class="price">₹ 6,999</div>
+        <div class="variants">
+          <div><strong>Colors:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Blue</a>
+            <a class="tag" href="#products">Black</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-14" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="macbook-air-m3.webp" alt="Laptop" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">UltraBook Laptop — UB-15</div>
+      </div>
+      <div class="detail-right">
+        <h2>UltraBook Laptop</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">Slim laptop with Intel i9, 16GB RAM, 1TB SSD, and OLED display.</div>
+        <div class="price">₹ 79,999</div>
+        <div class="variants">
+          <div><strong>Variants:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">16GB / 1TB</a>
+            <a class="tag" href="#products">32GB / 2TB</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="detail-15" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="dd49eb5bf3a6c340588c19036b8eb1dc.jpg" alt="Gaming Console" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">
+          NextGen Gaming Console — GC-9
+        </div>
+      </div>
+      <div class="detail-right">
+        <h2>NextGen Gaming Console</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> Electronics</div>
+        <div class="desc">
+          Powerful gaming console with 8K graphics, 120fps gameplay, and VR-ready support.
+          Includes dual wireless controllers.
+        </div>
+        <div class="price">₹ 49,999</div>
+        <div class="variants">
+          <div><strong>Variants:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">Standard Edition</a>
+            <a class="tag" href="#products">Deluxe Edition</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail-16" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="dry.webp" alt="SHIVAAY MIX DRY FRUITS " /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">SHIVAAY MIX DRY FRUITS  </div>
+      </div>
+      <div class="detail-right">
+        <h2>SHIVAAY MIX DRY FRUITS </h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong> GROCERY</div>
+        <div class="desc"> SHIVAAY MIX DRY FRUITS 1KG KAJU , BADAM , DAKH , KISHMISH , SEEDS ETC Almonds, Cashews, Raisins, Apricots, Assorted Seeds & Nuts, Dates  (1 x 1000 g)
+        </div>
+        <div class="price">₹ 498</div>
+        <div class="variants">
+          <div><strong>Quantity:</strong></div>
+          <div class="variant-list">
+            <a class="tag" href="#products">100kg</a>
+            <a class="tag" href="#products">500kg</a>
+          </div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="detail-17" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="-original-imahfh4ntfpfyyhc.webp" alt="Samsung 653 L" /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">SHIVAAY MIX DRY FRUITS  </div>
+      </div>
+      <div class="detail-right">
+        <h2>Samsung 653 L</h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong>Electronics</div>
+        <div class="desc">
+Elevate your kitchen experience with the Samsung Wi-Fi-enabled convertible 5-in-1 Side-by-Side refrigerator. It's not just a refrigerator; it's your smart partner that optimises energy use, adapts to your needs, and simplifies your life with innovative features. With SmartThings integration, advanced cooling technologies, and innovative features, this refrigerator redefines convenience and efficiency in your daily life. Discover a new standard of convenience, efficiency, and style in the heart of your home.</div>
+        <div class="price">₹ 498</div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="detail-18" class="overlay" aria-hidden="true">
+    <div class="detail-box">
+      <div class="detail-left">
+        <div class="big"><img src="cycle.webp" alt="Urban Terrain " /></div>
+        <div style="font-size:.95rem;color:#556074;margin-top:.5rem">Urban Terrain </div>
+      </div>
+      <div class="detail-right">
+        <h2>Urban Terrain </h2>
+        <a class="close-link btn small" href="#products">Close</a>
+        <div class="meta"><strong>Category:</strong>Accessories</div>
+        <div class="desc">1 Year Warranty On Frame || 6 months Domestic Warranty on Manufacturing Defects || Please Contact Customer care Toll free number for any queries</div>
+        <div class="price">₹ 12,880</div>
+
+        <div style="margin-top:auto;display:flex;gap:.6rem">
+          <a class="btn primary" href="#products">Add to cart (static)</a>
+          <a class="btn ghost" href="#products">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- IMAGE VIEWERS -->
+  <div id="view-1" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="71iNq25OGOL._AC_UL320_.webp" alt="Explorer Watch full"></div>
+  <div id="view-2" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="QuietForce Headphones.webp" alt="Headphones full"></div>
+  <div id="view-3" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="RunSwift Sneakers.webp" alt="Sneakers full"></div>
+  <div id="view-4" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="PeakCam Mirrorless.webp" alt="Camera full"></div>
+  <div id="view-5" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="Alpine Jacket.webp" alt="Jacket full"></div>
+  <div id="view-6" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="apple.webp" alt="iPhone 16 Pro Max full"></div>
+  <div id="view-7" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="Apple Watch Series 9.webp" alt="Apple Watch full"></div>
+  <div id="view-8" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="trendyclothes.webp" alt="Clothes full"></div>
+  <div id="view-9" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="71Nwtop9jtL._SL1500_.jpg" alt="Samsung Mobile full"></div>
+  <div id="view-10" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="Apple Smart TV 65-Inch UHD.webp" alt="Smart TV full"></div>
+  <div id="view-11" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="canon-eos-r5.web.webp" alt="Camera full"></div>
+  <div id="view-12" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="download (9).jpg" alt="Airbuds full"></div>
+  <div id="view-13" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="firebar-20-infire-original-imaha6ctaxz6ysjp.webp" alt="Speaker full"></div>
+  <div id="view-14" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="macbook-air-m3.webp" alt="Laptop full"></div>
+  <div id="view-15" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="dd49eb5bf3a6c340588c19036b8eb1dc.jpg" alt="Gaming Console full"></div>
+  <div id="view-16" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="dry.webp" alt="Gaming Console full"></div>
+  <div id="view-17" class="viewer"><a href="#products" class="btn small close-btn">Close ✕</a><img src="-original-imahfh4ntfpfyyhc.webp" alt="Gaming Console full"></div>
+
+</body>
+<script src="myshop.js"></script>
+</html>
